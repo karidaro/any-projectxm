@@ -26,6 +26,12 @@
       <p>{i}: { list.name }</p>
       <p>{ list.num }</p>
     {/each}
+    <div class="array">
+      {#each Array(20) as _, i}
+        <p>아무거나</p>
+      {/each}
+    </div>
+    <h4>{ count }</h4>
     <button on:click={ incrementCount }>클릭 수: { count }</button> <!-- 버튼을 누르면 카운트 됨 -->
   </div>
 </main>
@@ -35,5 +41,10 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .array {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 </style>
